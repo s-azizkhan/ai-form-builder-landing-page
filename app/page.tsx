@@ -39,7 +39,7 @@ export default function Home() {
 
             <div className="inline-block relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-              <div className="relative px-6 py-3 bg-black rounded-lg leading-none">
+              <div className="relative px-6 py-3 bg-black rounded-xl leading-none">
                 <span className="text-gray-400">
                   <span className="text-pink-400">200+</span> early adopters already joined
                 </span>

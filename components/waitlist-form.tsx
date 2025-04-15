@@ -34,9 +34,9 @@ export default function WaitlistForm() {
       {/* Glow effect */}
       <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg blur opacity-75"></div>
 
-      <div className="relative bg-black rounded-lg p-1">
+      <div className="relative bg-black rounded-xl p-1">
         {isSubmitted ? (
-          <div className="bg-gradient-to-r from-green-500/20 to-green-500/10 rounded-lg p-4 text-center">
+          <div className="bg-gradient-to-r from-green-500/20 to-green-500/10 rounded-xl p-4 text-center">
             <p className="text-green-400 font-bold">You're on the list! 🎉</p>
           </div>
         ) : (
@@ -44,14 +44,14 @@ export default function WaitlistForm() {
             <Input
               type="email"
               placeholder="Enter your email"
-              className="bg-gray-900 border-gray-700 text-white placeholder:text-gray-500 focus:ring-pink-500 focus:border-pink-500"
+              className="bg-gray-900 border-gray-700 text-white placeholder:text-gray-500 focus:ring-pink-500 focus:border-pink-500 rounded-xl"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
             <Button
               type="submit"
-              className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold"
+              className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold rounded-xl"
               disabled={isSubmitting}
             >
               {isSubmitting ? (
