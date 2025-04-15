@@ -9,13 +9,13 @@ interface BenefitCardProps {
 export default function BenefitCard({ icon, title, description }: BenefitCardProps) {
   return (
     <div className="group relative">
-      {/* Glow effect on hover */}
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg blur opacity-0 group-hover:opacity-75 transition duration-300"></div>
+      {/* Subtle glow on hover */}
+      <div className="absolute -inset-1 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl blur-sm opacity-0 group-hover:opacity-20 transition duration-500"></div>
 
-      <div className="relative bg-gray-900/60 border border-gray-800 p-6 rounded-lg hover:bg-gray-900/80 transition-all duration-300">
-        <div className="mb-4 p-3 bg-gray-800 rounded-lg inline-block">{icon}</div>
-        <h3 className="text-xl font-bold mb-2 text-white retro-text">{title}</h3>
-        <p className="text-gray-400">{description}</p>
+      <div className="relative bg-black/70 border border-gray-700 p-6 rounded-xl hover:bg-black/80 transition-all duration-300">
+        <div className="mb-4 p-2 bg-gray-900/50 rounded-lg inline-block">{icon}</div>
+        <h3 className="text-xl font-semibold mb-3 text-white">{title}</h3>
+        <p className="text-gray-300 text-base">{description}</p>
 
         {/* Pixelated corner accent */}
         <div className="absolute bottom-0 right-0 w-4 h-4 bg-gradient-to-br from-pink-500 to-purple-500"></div>
