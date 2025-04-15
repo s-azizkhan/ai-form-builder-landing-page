@@ -29,7 +29,7 @@ export default function RoadmapTimeline() {
   return (
     <div className="relative">
       {/* Horizontal line for desktop */}
-      <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 transform -translate-y-1/2"></div>
+      <div className="hidden md:block absolute top-full left-0 right-0 h-1 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 transform -translate-y-1/2"></div>
 
       {/* Vertical line for mobile */}
       <div className="md:hidden absolute top-0 bottom-0 left-8 w-1 bg-gradient-to-b from-pink-500 via-purple-500 to-cyan-500"></div>
@@ -38,7 +38,7 @@ export default function RoadmapTimeline() {
         {timelineItems.map((item, index) => (
           <div key={index} className="relative">
             {/* Desktop dot */}
-            <div className="hidden md:block absolute top-1/2 left-1/2 w-6 h-6 bg-black border-2 border-gray-800 rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10">
+            <div className="hidden md:block absolute top-full left-1/2 w-6 h-6 bg-black border-2 border-gray-800 rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10">
               <div className={`absolute inset-1 bg-${item.color}-500 rounded-full animate-pulse`}></div>
             </div>
 
