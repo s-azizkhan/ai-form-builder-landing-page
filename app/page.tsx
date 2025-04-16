@@ -1,10 +1,10 @@
-import Link from "next/link"
 import { Mail, Zap, Clock, Filter, Share2, HelpCircle, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import WaitlistForm from "@/components/waitlist-form"
 import BenefitCard from "@/components/benefit-card"
 import RoadmapTimeline from "@/components/roadmap-timeline"
 import FooterSection from "@/components/footer"
+import VcPitchSection from "@/components/vc-pitch"
 
 export default function Home() {
   return (
@@ -24,8 +24,8 @@ export default function Home() {
 
           <div className="max-w-6xl mx-auto text-center">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-1.5 mb-6 border border-pink-400 rounded-full bg-black/80 text-pink-300 text-sm font-medium tracking-wider uppercase shadow-sm hover:bg-black/90 transition">
-              <span className="mr-2">🚀</span> Beta Launching Soon
+            <div className="inline-flex items-center px-4 py-1.5 mb-6 border border-pink-400 rounded-full bg-black/80 text-pink-300 text-sm font-medium tracking-wider capitalize shadow-sm hover:bg-black/90 transition">
+              <span className="mr-2">🚀</span> Beta Launching Soon ⌛
             </div>
 
             {/* Headline */}
@@ -46,7 +46,9 @@ export default function Home() {
             {/* Social Proof */}
             <div className="inline-flex items-center space-x-2">
               <span className="text-base text-gray-300">Trusted by</span>
-              <span className="text-base text-pink-300 font-semibold">350+</span>
+              <span className="text-base text-pink-300 font-semibold">
+                {`19+`}
+                </span>
               <span className="text-base text-gray-300">early adopters</span>
             </div>
           </div>
@@ -56,7 +58,7 @@ export default function Home() {
         <section className="px-4 py-10 md:py-14 bg-gradient-to-b from-black to-purple-900/20">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400">
-              How this work?
+              How this work? 
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-8 bg-black/60 border border-gray-700 rounded-xl hover:bg-black/70 transition">
@@ -94,7 +96,7 @@ export default function Home() {
         <section className="px-4 py-12 md:py-16 bg-gradient-to-t from-black to-gray-950">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400">
-              Why We're Different
+              Why We're Different?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <BenefitCard
@@ -169,56 +171,7 @@ export default function Home() {
         </section>
 
         {/* VC Pitch Section */}
-        <section className="px-4 py-12 md:py-16 bg-gradient-to-b from-black to-purple-950/10 relative">
-          <div className="absolute bottom-0 left-1/4 w-48 h-48 bg-pink-600 rounded-full filter blur-[80px] opacity-30"></div>
-
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
-              The Future of Forms
-            </h2>
-            <div className="bg-gradient-to-r p-[1px] from-pink-500 via-purple-500 to-cyan-500 rounded-xl mb-10">
-              <div className="bg-black p-6 rounded-xl">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3 text-white">Market Opportunity</h3>
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <div className="mr-2 mt-1 h-2 w-2 bg-pink-500"></div>
-                        <p className="text-gray-300 text-sm">
-                          $1.5B form builder market
-                        </p>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="mr-2 mt-1 h-2 w-2 bg-purple-500"></div>
-                        <p className="text-gray-300 text-sm">
-                          Growing at 8% CAGR
-                        </p>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="mr-2 mt-1 h-2 w-2 bg-cyan-500"></div>
-                        <p className="text-gray-300 text-sm">
-                          Conversational UX boosts conversions 30%
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3 text-white">Our Vision</h3>
-                    <p className="text-gray-300 text-sm">
-                      Redefining data collection with AI and human-like UX. Targeting 100,000+ users by 2026.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="text-center">
-              <Button className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white px-6 py-3 text-base font-semibold rounded-xl">
-                <Mail className="mr-2 h-4 w-4" />
-                Contact for Investment
-              </Button>
-            </div>
-          </div>
-        </section>
+        <VcPitchSection />
 
         {/* Footer with waitlist repeat */}
         <FooterSection />
